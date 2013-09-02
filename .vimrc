@@ -39,6 +39,11 @@ let g:pydiction_location = '~/.vim/complete-dict'
 
 "Javascript 
 
+"Color-color
+g:cssColorVimDoNotMessMyUpdatetime
+let g:cssColorVimDoNotMessMyUpdatetime = 1
+
+
 
 "Vundle
 set rtp+=~/.vim/bundle/vundle/
@@ -56,3 +61,4 @@ Bundle 'https://github.com/altercation/vim-colors-solarized'
 Bundle 'https://github.com/tpope/vim-vividchalk'
 Bundle 'https://github.com/rkulla/pydiction'
 Bundle 'https://github.com/pangloss/vim-javascript'
+Bundle 'https://github.com/skammer/vim-css-color'
