@@ -40,7 +40,6 @@ let g:pydiction_location = '~/.vim/complete-dict'
 "Javascript 
 
 "Color-color
-g:cssColorVimDoNotMessMyUpdatetime
 let g:cssColorVimDoNotMessMyUpdatetime = 1
 
 
@@ -54,7 +53,7 @@ Bundle 'xml.vim'
 Bundle 'The-NERD-tree'  
 Bundle 'taglist.vim'
 Bundle 'snipMate'
-Bundle 'https://github.com/fholgado/minibufexpl.vim'
+"Bundle 'https://github.com/fholgado/minibufexpl.vim'
 Bundle 'https://github.com/Lokaltog/vim-powerline'
 Bundle 'https://github.com/vim-scripts/AuthorInfo'
 Bundle 'https://github.com/altercation/vim-colors-solarized'
