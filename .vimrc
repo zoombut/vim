@@ -14,8 +14,8 @@ set noswapfile
 filetype on
 filetype plugin on
 filetype indent on		"插件加载设置
-
 set showmatch 			"显示匹配括号
+
 
 "Tag List
 let Tlist_Show_One_File = 1 "不同时显示多个文件的tag，只显示当前文件的 
@@ -31,14 +31,8 @@ set t_Co=256
 let g:Powerline_cache_enabled = 1
 set laststatus=2   " Always show the statusline
 "Pydiction
-let g:pydiction_menu_height = 20
 let g:pydiction_location = '~/.vim/complete-dict'
- if has("autocmd")
-       autocmd FileType python set complete+=k/path/to/pydiction iskeyword+=.,(
-    endif " has("autocmd") 
-
 "Javascript 
-
 "Color-color
 let g:cssColorVimDoNotMessMyUpdatetime = 1
 
@@ -47,7 +41,6 @@ let g:cssColorVimDoNotMessMyUpdatetime = 1
 "Vundle
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
-
 Bundle 'gmarik/vundle'
 Bundle 'xml.vim'
 Bundle 'The-NERD-tree'  
@@ -61,3 +54,10 @@ Bundle 'https://github.com/tpope/vim-vividchalk'
 Bundle 'https://github.com/rkulla/pydiction'
 Bundle 'https://github.com/pangloss/vim-javascript'
 Bundle 'https://github.com/skammer/vim-css-color'
+Bundle 'AutoComplPop'
+Bundle 'ZenCoding.vim'
+Bundle 'L9'
+Bundle 'FuzzyFinder'
+Bundle 'WebAPI.vim'
+Bundle 'Gist.vim'
+
