@@ -1,5 +1,5 @@
 set nu					"显示行号
-color desert 
+colorscheme desert 
 
 syntax on				"语法高亮
 set guioptions-=T		"不显示工具栏
@@ -14,16 +14,23 @@ set noswapfile
 filetype on
 filetype plugin on
 filetype indent on		"插件加载设置
+autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 set showmatch 			"显示匹配括号
-
+"自动括号
+inoremap ( ()<ESC>i
+inoremap { {}<ESC>i
+inoremap [ []<ESC>i
 
 "Tag List
-let Tlist_Show_One_File = 1 "不同时显示多个文件的tag，只显示当前文件的 
-let Tlist_Exit_OnlyWindow = 1 "如果taglist窗口是最后一个窗口，则退出vim 
-let Tlist_Use_Right_Window = 1 "在右侧窗口中显示taglist窗口
+let Tlist_Show_One_File = 1		 "不同时显示多个文件的tag，只显示当前文件的 
+let Tlist_Exit_OnlyWindow = 1	 "如果taglist窗口是最后一个窗口，则退出vim 
+let Tlist_Use_Right_Window = 1	 "在右侧窗口中显示taglist窗口
 nmap <F2> : Tlist <cr>
 "NertTree
-nmap <F3> :NERDTree <cr>
+let g:NERDChristmasTree = 1      "色彩显示
+nmap <F3> :NERDTree <cr>		 "F3调用NertTree
+"Tag
+nmap <F4> :!ctags -R *<CR>
 "PowerLine
 let g:Powerline_symbols = 'fancy'
 set nocompatible
@@ -32,21 +39,32 @@ let g:Powerline_cache_enabled = 1
 set laststatus=2   " Always show the statusline
 "Pydiction
 let g:pydiction_location = '~/.vim/complete-dict'
+"PHP
+set dictionary-=~/.vim/PHP-funclist.txt dictionary+=~/.vim/PHP-funclist.txt
+set complete-=k complete+=k
 "Javascript 
 "Color-color
 let g:cssColorVimDoNotMessMyUpdatetime = 1
+
+"Tab 
+nmap <C-n> :tabnew <CR>
+nmap <C-w> :tabclose <CR>
+
+
+
 
 
 
 "Vundle
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
+
 Bundle 'gmarik/vundle'
 Bundle 'xml.vim'
+Bundle 'php.vim'
 Bundle 'The-NERD-tree'  
 Bundle 'taglist.vim'
 Bundle 'snipMate'
-"Bundle 'https://github.com/fholgado/minibufexpl.vim'
 Bundle 'https://github.com/Lokaltog/vim-powerline'
 Bundle 'https://github.com/vim-scripts/AuthorInfo'
 Bundle 'https://github.com/altercation/vim-colors-solarized'
@@ -60,4 +78,3 @@ Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'WebAPI.vim'
 Bundle 'Gist.vim'
-
